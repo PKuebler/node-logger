@@ -1,0 +1,19 @@
+{
+  "name"          : "nodejs-log",
+  "description"   : "Very Simple Colorful Console Logging",
+  "keywords"      : ["log", "simple", "console", "color"],
+  "author"        : "Philipp Kuebler <info@pkuebler.de>",
+  "main"          : "logger.js",
+  "version"       : "0.0.1",
+  "scripts"       : {
+    "test"        : "node test/test"
+  },
+  "dependencies"  : {
+    "colors": "1.0.3"
+  },
+  "repository"    : {
+    "type": "git",
+    "url": "https://github.com/PKuebler/nodejs-log.git"
+  },
+  "license"       : "MIT"
+}
