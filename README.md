@@ -25,6 +25,9 @@ Logger.error('This is my Message!', 'Test');
 
 // Result: [info] This is my Message!
 Logger.info('This is my Message!');
+
+// Result: [debug] [Test] This is my Message!
+Logger.debug('This is my Message!', 'Test');
 ```
 
 # The MIT License (MIT)

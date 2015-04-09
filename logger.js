@@ -6,7 +6,7 @@ function Logger() {
 Logger.debugLevel = 'info';
 
 Logger.log = function (level, message, namespace) {
-  var levels = ['error', 'warn', 'info'];
+  var levels = ['error', 'warn', 'info', 'debug'];
   if (levels.indexOf(level) <= levels.indexOf(Logger.debugLevel) ) {
     if (typeof message !== 'string')
       message = JSON.stringify(message);
@@ -19,6 +19,8 @@ Logger.log = function (level, message, namespace) {
     else if (level == 'warn')
       level = level.yellow;
     else if (level == 'info')
+      level = level.green;
+    else if (level == 'debug')
       level = level.blue;
 
     console.log(level+':\t'+message);
@@ -35,6 +37,10 @@ Logger.warn = function (message, namespace) {
 
 Logger.info = function (message, namespace) {
   Logger.log('info', message, namespace);
+}
+
+Logger.debug = function (message, namespace) {
+  Logger.log('debug', message, namespace);
 }
 
 module.exports = Logger;
